@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(7d3e69452865c28a5ef8f0c49563c5d6.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+.contetnt img{
+    width: 50%; 
+    position: absolute;
+    right: 0px;
+    top: 20%;
+    filter: invert(100%) sepia(100%) hue-rotate(200deg);
+}
+@media (max-width: 660px) {
+    body {
+            background: url(90b2101130c5ea551d46ab7a6b4ce371.jpg);
+            height: 100vh;
+            background-size: cover;
+            width: 100%;
+            background-position: center;
+    
+        }
+    
+        .contetnt img {
+            width: 90%;
+            position: absolute;
+            right: 0px;
+            left: 20px;
+            top: 40%;
+            filter: invert(100%) sepia(100%) hue-rotate(200deg);
+        }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RAMAN</title>
+</head>
+<body>
+    <div class="contetnt">
+              <img src="IMG_20250301_220255.png">
+            
+            <audio id="myAudio" src="33.mp3" autoplay loop></audio>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var audio = document.getElementById("myAudio");
+                    var playPromise = audio.play();
+
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log("الصوت يعمل تلقائيًا ✅");
+                        }).catch(error => {
+                            console.log("تم منع التشغيل التلقائي ❌، يرجى التفاعل مع الصفحة.");
+                            document.body.addEventListener("click", function () {
+                                audio.play();
+                                console.log("تم تشغيل الصوت بعد النقر ✅");
+                            }, { once: true });
+                        });
+                    }
+                });
+            </script>
+
+            
+            
+            
+            </div>
+    
+</body>
+</html>
